@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+  <html lang="it">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nora.81 — Mockup ONE TOUCH</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: 'Roboto', sans-serif; background: #f0f0f0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+  .app { width: 400px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+
+  .topbar { background: #D32F2F; padding: 14px 20px; display: flex; align-items: center; gap: 10px; }
+    .topbar .back { color: white; font-size: 20px; cursor: pointer; }
+  .topbar span { color: white; font-weight: 500; font-size: 15px; }
+
+  .title { text-align: center; padding: 24px 20px 8px; font-size: 16px; color: #333; }
+  .subtitle { text-align: center; padding: 0 20px 20px; font-size: 13px; color: #999; }
+
+  .kit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 0 20px; }
+
+  .kit-card { border: 2px solid #e0e0e0; border-radius: 10px; padding: 24px 16px; text-align: center; cursor: pointer; transition: all 0.15s; }
+  .kit-card:hover { border-color: #D32F2F; }
+      .kit-card.selected { border-color: #D32F2F; background: #FFF5F5; }
+
+  .kit-card .num { font-size: 28px; font-weight: 700; color: #333; }
+  .kit-card .name { font-size: 13px; color: #888; margin-top: 4px; }
+
+  .kit-card.k1 .num { color: #D32F2F; }
+    .kit-card.k2 .num { color: #1565C0; }
+  .kit-card.k3 .num { color: #00838F; }
+  .kit-card.k4 .num { color: #2E7D32; }
+
+  .btn-section { padding: 20px; }
+  .btn-confirm { width: 100%; padding: 14px; background: #D32F2F; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; opacity: 0.3; pointer-events: none; }
+    .btn-confirm.active { opacity: 1; pointer-events: auto; }
+</style>
+  </head>
+  <body>
+
+<div class="app">
+    <div class="topbar">
+      <span class="back">&#8592;</span>
+      <span>CPS 272</span>
+    </div>
+
+  <div class="title">Segna kit utilizzato</div>
+  <div class="subtitle">Seleziona e conferma</div>
+
+  <div class="kit-grid">
+    <div class="kit-card k1" onclick="toggle(this)">
+      <div class="num">KIT 1</div>
+      <div class="name">Disinfezione</div>
+    </div>
+    <div class="kit-card k2" onclick="toggle(this)">
+        <div class="num">KIT 2</div>
+      <div class="name">Medicazione</div>
+      </div>
+    <div class="kit-card k3" onclick="toggle(this)">
+        <div class="num">KIT 3</div>
+      <div class="name">Protezione</div>
+    </div>
+    <div class="kit-card k4" onclick="toggle(this)">
+        <div class="num">KIT 4</div>
+        <div class="name">Traumi</div>
+      </div>
+    </div>
+
+    <div class="btn-section">
+      <button class="btn-con
